@@ -1,0 +1,4 @@
+#!/bin/sh
+
+mkdir -p $HOME/.scriptbak
+cp $HOME/.scriptbak/picom_transparency.conf $HOME/.config/picom/picom.conf
