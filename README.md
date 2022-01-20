@@ -34,5 +34,6 @@ present under [picom.conf](./.config/picom/picom.conf)
 
 ## Fonts
 
-- Install mononoki-nerd-font-patched from AUR
-
+- Install mononoki-nerd-font-patched from AUR (not used anymore)
+- Cantrell for normal text
+- JetbrainsMono for terminal
