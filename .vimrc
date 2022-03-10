@@ -35,24 +35,16 @@ set nowritebackup
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
-set colorcolumn=80
+set colorcolumn=120 " The bar is at 120 Columns Width
 set signcolumn=yes
 
 " Vim Plugins
 call plug#begin('~/.vim/plugged')
 
 " Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'arcticicestudio/nord-vim'
 Plug 'rhysd/vim-clang-format'
-Plug 'itchyny/lightline.vim'
-" Plug 'tpope/vim-fugitive'
-" Plug 'preservim/nerdcommenter'
-Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -65,8 +57,8 @@ syntax on
 " highlight Normal ctermbg=black
 
 " let g:lightline = {
-            \ 'colorscheme' : 'onedark'
-            \ }
+"            \ 'colorscheme' : 'onedark'
+"            \ }
 
 
 " NERDTree Stuff
