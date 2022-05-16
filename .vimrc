@@ -21,7 +21,6 @@ set ignorecase
 set smartcase
 set smartindent
 
-set noswapfile
 set undodir=~/.vim/undodir
 set undofile
 
@@ -29,13 +28,11 @@ set incsearch
 set scrolloff=8
 
 set encoding=utf-8
-set nobackup
-set nowritebackup
 
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
-set colorcolumn=120 " The bar is at 120 Columns Width
+set colorcolumn=80 " The bar is at 80 Columns Width
 set signcolumn=yes
 
 " Vim Plugins
@@ -50,6 +47,7 @@ call plug#end()
 
 " Set colorscheme
 syntax on
+
 " colorscheme nord
 " colorscheme onedark
 
