@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH:$HOME/.emacs.d/bin
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK
 
@@ -14,15 +14,18 @@ export ZSH="/home/$USER/.oh-my-zsh"
 ZSH_THEME="steeef"
 
 plugins=(git
-        colored-man-pages
-        vi-mode)
+        colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
 
-#free
-alias free="free -mt"
+# Emacs
+alias remacs='systemctl restart --user emacs.service'
+alias semacs='systemctl status --user emacs.service'
+alias xemacs='systemctl stop --user emacs.service'
+export EDITOR='emacsc'
+export VISUAL='emacsc'
 
 #continue download
 alias wget="wget -c"
@@ -48,15 +51,6 @@ alias yta-best="yt-dlp --extract-audio --audio-format best "
 alias yta-flac="yt-dlp --extract-audio --audio-format flac "
 alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
 alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
-
-#configuration
-alias ngrub="sudo $EDITOR /etc/default/grub"
-alias nconfgrub="sudo $EDITOR /boot/grub/grub.cfg"
-alias nmkinitcpio="sudo $EDITOR /etc/mkinitcpio.conf"
-alias nfstab="sudo $EDITOR /etc/fstab"
-alias nhosts="sudo $EDITOR /etc/hosts"
-alias nb="$EDITOR ~/.bashrc"
-alias nz="$EDITOR ~/.zshrc"
 
 #gpg
 #verify signature for isos
@@ -110,29 +104,6 @@ ex ()
 #remove
 alias rmgitcache="rm -r ~/.cache/git"
 
-# reporting tools - install when not installed
-#neofetch
-#screenfetch
-#alsi
-#paleofetch
-#fetch
-#hfetch
-#sfetch
-#ufetch
-#ufetch-arco
-#pfetch
-#sysinfo
-#sysinfo-retro
-#cpufetch
-#colorscript random
-
-#                               #
-# My Configuration Starts here  #
-#                               #
-
-# User configuration
-
-# Aliases
 # cd
 alias cdpr='cd ~/Projects/'
 alias cdc='cd ~/Projects/C'

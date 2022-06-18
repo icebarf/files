@@ -22,7 +22,8 @@ set smartcase
 set smartindent
 
 set undodir=~/.vim/undodir
-set undofile
+set directory=~/.vim/swap
+set backupdir=~/.vim/backup
 
 set incsearch
 set scrolloff=8
@@ -38,45 +39,14 @@ set signcolumn=yes
 " Vim Plugins
 call plug#begin('~/.vim/plugged')
 
-" Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rhysd/vim-clang-format'
+Plug 'vlime/vlime', {'rtp': 'vim/'}
+Plug 'kovisoft/paredit'
 
 call plug#end()
 
 " Set colorscheme
 syntax on
-
-" colorscheme nord
-" colorscheme onedark
-
-" Use with one dark colorscheme
-" highlight Normal ctermbg=black
-
-" let g:lightline = {
-"            \ 'colorscheme' : 'onedark'
-"            \ }
-
-
-" NERDTree Stuff
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
-" Start NERDTree. If a file is specified, move the cursor to its window.
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
-
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-" If another buffer tries to replace NERDTree, put it in the other window, and
-" bring back NERDTree.
-autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
-
 
 " Custom Keybinds
 
@@ -84,17 +54,7 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 nnoremap <leader>;   :source ~/.vimrc<CR>
 nnoremap <leader>w;  :w! <bar> source ~/.vimrc<CR>
 
-" Git
-nnoremap <leader>ga  :Git add 
-nnoremap <leader>gc  :Git commit -m ""<Left>
-nnoremap <leader>gps :Git push origin main<CR>
-nnoremap <leader>gpl :Git pull<CR>
-nnoremap <leader>gst :Git stash<CR>
-
 " Plug
 nnoremap <leader>pi  :PlugInstall<CR>
 nnoremap <leader>pu  :PlugUpdate<CR>
 nnoremap <leader>pc  :PlugClean<CR>
-
-" Coc
-nnoremap <leader>cup :CocUpdate<CR>
