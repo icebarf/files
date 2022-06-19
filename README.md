@@ -1,19 +1,19 @@
 # dotfiles
 Contains my editor and shell configuration files
 
-## Requirements
+## Packages needed
 
 - Install oh-my-zsh on a fresh install
 - Install alacritty and make sure .config/alacritty/alacritty.yml exists
 - Install alacritty-themes using npm to install themes with ease
 
 > Do the following when not on a Desktop Environment
-- Install `polkit` in official mirror and `polkit-dumb-agent` in  AUR.
+- Install `polkit` 
 - Install `picom` for transparency in alacritty
 
 ## Colors
 
-Colorscheme preferred on terminal:
+Colorschemes I like
 
 - One-Dark
 - Nord
@@ -22,6 +22,8 @@ Colorscheme preferred on terminal:
 Colorscheme on Gnome/Cosmic Dekstop
 
 - Nord
+- Arc
+- One-Dark
 
 ## Terminal transparency
 
@@ -35,6 +37,21 @@ present under [picom.conf](./.config/picom/picom.conf)
 
 ## Fonts
 
-- Install mononoki-nerd-font-patched from AUR (is not used anymore)
+- Install mononoki-nerd-font-patched from AUR (don't use anymore)
 - Cantrell for normal text
 - Cascadia Code PL for monospace text
+
+## Gnome Shell Extensions
+
+These are the extensions I prefer while using Gnome desktop.
+
+Though all of these are not necessarily enabled at all times.
+
+- Blur my shell
+- Clipboard History
+- Alphabetical App Grid
+- AppIndicator and KStatusNotifierItem Support
+- Dash to Dock
+- Freon
+- gtile
+- OpenWeather
