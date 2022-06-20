@@ -40,6 +40,7 @@ present under [picom.conf](./.config/picom/picom.conf)
 - Install mononoki-nerd-font-patched from AUR (don't use anymore)
 - Cantrell for normal text
 - Cascadia Code PL for monospace text
+- nerd-fonts-fira-code for icons with exa maybe
 
 ## Gnome Shell Extensions
 
